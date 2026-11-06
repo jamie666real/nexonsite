@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
   --ink: #f4f7ff;
@@ -29,7 +29,7 @@ body {
     radial-gradient(circle at 12% 8%, rgba(77, 139, 255, 0.28), transparent 30rem),
     radial-gradient(circle at 88% 20%, rgba(169, 83, 255, 0.22), transparent 28rem),
     linear-gradient(135deg, #080b20 0%, #10163a 48%, #1b1040 100%);
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Press Start 2P', monospace;
   line-height: 1.6;
 }
 
@@ -148,7 +148,6 @@ nav {
 .status-label {
   margin: 0 0 19px;
   color: var(--violet);
-  font-family: 'DM Mono', monospace;
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -248,7 +247,6 @@ h2 {
   bottom: 27px;
   left: 30px;
   color: rgba(255, 255, 255, 0.78);
-  font-family: 'DM Mono', monospace;
   font-size: 0.7rem;
   text-transform: uppercase;
 }
@@ -354,7 +352,6 @@ h2 {
 
 .rules-list li::marker {
   color: var(--violet);
-  font-family: 'DM Mono', monospace;
 }
 
 .rules-list strong {
@@ -398,7 +395,6 @@ footer {
   border-top: 1px solid rgba(167, 183, 255, 0.14);
   padding: 26px 0 32px;
   color: #7e8aab;
-  font-family: 'DM Mono', monospace;
   font-size: 0.68rem;
 }
 
