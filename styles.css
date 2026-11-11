@@ -30,6 +30,11 @@
   box-sizing: border-box;
 }
 
+*:focus-visible {
+  outline: 2px solid #c5a5ff;
+  outline-offset: 4px;
+}
+
 html {
   min-width: 320px;
   scroll-behavior: smooth;
@@ -183,6 +188,10 @@ h1 {
   max-width: 620px;
   margin-bottom: 25px;
   font-size: clamp(3.3rem, 7vw, 6.5rem);
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 5.7vw, 5.5rem);
 }
 
 h2 {
@@ -412,6 +421,49 @@ footer {
   font-size: 0.68rem;
 }
 
+.nav-toggle {
+  display: none;
+  min-height: 42px;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: rgba(76, 102, 190, 0.16);
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.nav-toggle-icon,
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  width: 16px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.nav-toggle-icon {
+  position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  position: absolute;
+  left: 0;
+  content: '';
+}
+
+.nav-toggle-icon::before {
+  top: -5px;
+}
+
+.nav-toggle-icon::after {
+  top: 5px;
+}
+
 @media (max-width: 760px) {
   .wrap {
     width: min(100% - 32px, 580px);
@@ -431,7 +483,26 @@ footer {
     gap: 10px;
   }
 
+  .has-mobile-nav .nav-toggle {
+    display: inline-flex;
+    order: 1;
+  }
+
+  .has-mobile-nav .nav-links {
+    display: none;
+  }
+
+  .has-mobile-nav .nav-links.is-open {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px 20px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+
   .nav-join {
+    order: 2;
     margin-left: auto;
     padding: 0 12px;
   }
@@ -444,6 +515,10 @@ footer {
 
   h1 {
     font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.7rem, 12vw, 4.2rem);
   }
 
   .scene {
@@ -490,5 +565,18 @@ footer {
 
   .launch-button {
     width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
